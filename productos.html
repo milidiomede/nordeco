@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NÓRDICA DECO — Productos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&family=Marcellus&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav-wrap">
+      <a class="logo" href="./index.html">
+        <img class="logo-icon logo-icon-ajuste" src="./img/icono-olas.png" alt=""> <span class="logo-nordica logo-texto-ajuste">NÓRDICA</span> <span class="logo-deco logo-texto-ajuste">DECO</span> </a>
+      <nav class="nav">
+        <a href="./index.html">Inicio</a>
+        <a href="./nosotros.html">Nosotros</a>
+        <a class="active" href="./productos.html">Productos</a>
+        <a href="./promociones.html">Promociones</a> <a href="./contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section productos">
+      <h1>Productos</h1>
+      <div class="grid-cards">
+        <article class="card">
+          <img src="./img/floreropopamarillo.jpg" alt="Florero Pop Amarillo">
+          <h3>Florero Pop Amarillo</h3>
+          <p>Diseño de líneas suaves y acabado artesanal.</p>
+          <p class="price">$30.000</p>
+          <button class="btn-comprar" data-nombre="Florero Pop Amarillo" data-precio="30000">COMPRAR</button>
+        </article>
+        <article class="card">
+          <img src="./img/lamparaestiron.webp" alt="Lámpara Estiron">
+          <h3>Lámpara Estiron</h3>
+          <p>Luz cálida con base en cerámica mate.</p>
+          <p class="price">$45.000</p>
+          <button class="btn-comprar" data-nombre="Lámpara Estiron" data-precio="45000">COMPRAR</button>
+        </article>
+        <article class="card">
+          <img src="./img/bowlsmamushka.webp" alt="Bowls Mamushka">
+          <h3>Bowls Mamushka</h3>
+          <p>Set de cerámica esmaltada en tonos neutros.</p>
+          <p class="price">$25.800</p>
+          <button class="btn-comprar" data-nombre="Bowls Mamushka" data-precio="25800">COMPRAR</button>
+        </article>
+        <article class="card">
+          <img src="./img/servilletasdelino.webp" alt="Servilletas de lino">
+          <h3>Servilletas de lino</h3>
+          <p>Suaves, resistentes y combinables.</p>
+          <p class="price">$10.500</p>
+          <button class="btn-comprar" data-nombre="Servilletas de lino" data-precio="10500">COMPRAR</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap"><small>© 2025 NÓRDICA DECO</small></div>
+  </footer>
+  <script>
+    // Script para manejar la redirección del botón COMPRAR y pasar datos
+    document.querySelectorAll('.btn-comprar').forEach(button => {
+      button.addEventListener('click', (event) => {
+        const nombre = event.currentTarget.dataset.nombre;
+        const precio = event.currentTarget.dataset.precio;
+        // Codifica los parámetros para la URL
+        const query = `?producto=${encodeURIComponent(nombre)}&precio=${encodeURIComponent(precio)}`;
+        window.location.href = `./promociones.html${query}`;
+      });
+    });
+  </script>
+</body>
+</html>

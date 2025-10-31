@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NÓRDICA DECO — Promociones</title>
+  <meta name="description" content="Calcula tu ahorro con las promociones vigentes de Nórdica Deco.">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&family=Marcellus&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav-wrap">
+      <a class="logo" href="./index.html">
+        <img class="logo-icon logo-icon-ajuste" src="./img/icono-olas.png" alt="Logo Nórdica Deco"> <span class="logo-nordica logo-texto-ajuste">NÓRDICA</span> <span class="logo-deco logo-texto-ajuste">DECO</span> </a>
+      
+      <button class="menu-toggle" aria-label="Toggle navigation" onclick="this.classList.toggle('is-open'); document.querySelector('.nav').classList.toggle('is-open');">☰</button>
+      
+      <nav class="nav">
+        <a href="./index.html">Inicio</a>
+        <a href="./nosotros.html">Nosotros</a>
+        <a href="./productos.html">Productos</a>
+        <a class="active" href="./promociones.html">Promociones</a> <a href="./contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section promociones">
+      <h1>Calculadora de Ahorro</h1>
+      <p style="text-align:center; margin-bottom: 30px; color: var(--gris);">Simula tu compra para ver cuánto ahorras con nuestras ofertas.</p>
+
+      <div class="wrap grid-promociones">
+
+        <article class="promocion-card" id="promo-monto75k">
+            <div class="promocion-imagen">
+                <img src="./img/promo1.png" alt="25% OFF en compras mayores a $75.000"> 
+            </div>
+            <h2>25% OFF > $75.000</h2>
+            <p>Válido en el total de la compra.</p>
+            <div class="form-group">
+                <label for="p1-producto">Selecciona Producto:</label>
+                <select id="p1-producto" required></select> 
+                
+                <label for="p1-cantidad">Cantidad de Productos:</label>
+                <input type="number" id="p1-cantidad" value="4" min="1" required>
+            </div>
+            
+            <button type="button" onclick="calcularPromocion('monto75k', 'p1-producto', 'p1-cantidad', 'p1-resultado')">Calcular Oferta</button>
+            
+            <div class="resultado" id="p1-resultado">
+                <p>Total s/ Descuento: <span data-sin-descuento>$0</span></p>
+                <p class="ahorro">Descuento Aplicado: <span data-descuento>$0</span></p>
+                <p class="total-final">Total Final: <span data-total-final>$0</span></p>
+                <p class="mensaje-amigable">¡Supera los **$75.000** y gana 25% OFF!</p>
+            </div>
+        </article>
+        
+        <article class="promocion-card" id="promo-primeracompra">
+            <div class="promocion-imagen">
+                <img src="./img/promo2.png" alt="15% de Descuento en tu primera compra">
+            </div>
+            <h2>15% OFF Primera Compra</h2>
+            <p>Para nuevos clientes.</p>
+            <div class="form-group">
+                <label for="p2-producto">Selecciona Producto:</label>
+                <select id="p2-producto" required></select>
+                
+                <label for="p2-cantidad">Cantidad de Productos:</label>
+                <input type="number" id="p2-cantidad" value="1" min="1" required>
+            </div>
+            
+            <button type="button" onclick="calcularPromocion('primeracompra', 'p2-producto', 'p2-cantidad', 'p2-resultado')">Calcular Oferta</button>
+            
+            <div class="resultado" id="p2-resultado">
+                <p>Total s/ Descuento: <span data-sin-descuento>$0</span></p>
+                <p class="ahorro">Descuento Aplicado: <span data-descuento>$0</span></p>
+                <p class="total-final">Total Final: <span data-total-final>$0</span></p>
+                <p class="mensaje-amigable">¡Tu primera compra tiene 15% OFF!</p>
+            </div>
+        </article>
+
+        <article class="promocion-card" id="promo-bowls">
+            <div class="promocion-imagen">
+                <img src="./img/promo3.png" alt="2x1 en los Bowls Mamushka">
+            </div>
+            <h2>2x1 Bowls Mamushka</h2>
+            <p>Llevá 2, pagá 1.</p>
+            <div class="form-group">
+                <label for="p3-producto">Selecciona Producto:</label>
+                <select id="p3-producto" required></select>
+
+                <label for="p3-cantidad">Cantidad de Bowls (mínimo 2):</label>
+                <input type="number" id="p3-cantidad" value="2" min="1" required>
+            </div>
+            
+            <button type="button" onclick="calcularPromocion('bowls', 'p3-producto', 'p3-cantidad', 'p3-resultado')">Calcular Oferta</button>
+            
+            <div class="resultado" id="p3-resultado">
+                <p>Total s/ Descuento: <span data-sin-descuento>$0</span></p>
+                <p class="ahorro">Descuento Aplicado: <span data-descuento>$0</span></p>
+                <p class="total-final">Total Final: <span data-total-final>$0</span></p>
+                <p class="mensaje-amigable">¡Llevás 2 Bowls, pagás solo 1!</p>
+            </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap"><small>© 2025 NÓRDICA DECO — Diseño cálido y funcional</small></div>
+  </footer>
+
+  <script src="promociones.js"></script>
+</body>
+</html>

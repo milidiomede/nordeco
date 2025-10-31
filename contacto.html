@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NÓRDICA DECO — Contacto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&family=Marcellus&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav-wrap">
+      <a class="logo" href="./index.html">
+        <img class="logo-icon logo-icon-ajuste" src="./img/icono-olas.png" alt=""> <span class="logo-nordica logo-texto-ajuste">NÓRDICA</span> <span class="logo-deco logo-texto-ajuste">DECO</span> </a>
+      
+      <button class="menu-toggle" aria-label="Toggle navigation" onclick="this.classList.toggle('is-open'); document.querySelector('.nav').classList.toggle('is-open');">☰</button>
+      
+      <nav class="nav">
+        <a href="./index.html">Inicio</a>
+        <a href="./nosotros.html">Nosotros</a>
+        <a href="./productos.html">Productos</a>
+        <a href="./promociones.html">Promociones</a> 
+        <a class="active" href="./contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section contacto">
+      <div class="contacto-grid">
+        <div class="contacto-info">
+          <h1>Contacto</h1>
+          <ul class="contacto-lista">
+            <li><span>Dirección:</span> Local 10, Distrito Arcos, CABA</li>
+            <li><span>Tel:</span> <a href="tel:+5491140676789">+54 9 11 4067-6789</a></li>
+            <li><span>Email:</span> <a href="mailto:contacto@nordicadeco.com">contacto@nordicadeco.com</a></li>
+            <li><span>IG:</span> <a href="https://instagram.com/nordicadeco" target="_blank" rel="noopener">@nordicadeco</a></li>
+          </ul>
+        </div>
+        <div class="contacto-mapa">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6382.990820036638!2d-58.42704519138559!3d-34.57852897995554!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aabcb7b7fd341%3A0xd4d803156d38286c!2sDistrito%20Arcos%20Premium%20Outlet!5e0!3m2!1ses!2sar!4v1759715374911!5m2!1ses!2sar"
+            width="100%" height="320" style="border:0;" loading="lazy" allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap"><small>© 2025 NÓRDICA DECO</small></div>
+  </footer>
+</body>
+</html>
